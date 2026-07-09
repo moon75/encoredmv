@@ -85,7 +85,10 @@
   }
   .wordmark{
     display:flex; align-items:baseline; gap:8px; font-size:1.3rem; letter-spacing:0.06em;
+    text-decoration:none; transition:opacity 0.2s ease;
   }
+  a.wordmark:hover, a.wordmark:focus-visible{opacity:0.8;}
+  a.wordmark:focus-visible{outline:1px solid var(--accent-2); outline-offset:4px;}
   .wordmark b{color:var(--ink);}
   .wordmark span{color:var(--accent); font-family:Georgia, serif; font-style:italic; font-weight:400; text-transform:none; font-size:0.85rem; letter-spacing:0.02em;}
   nav.links{display:flex; gap:clamp(18px,3vw,40px); align-items:center;}
@@ -501,9 +504,10 @@
 <body>
 
 <div class="grain"></div>
+<a id="top"></a>
 <header class="nav">
   <div class="nav-inner">
-    <div class="wordmark display"><b>ENCORE</b><span>dmv</span></div>
+    <a href="#top" class="wordmark display" aria-label="Encore DMV — back to top"><b>ENCORE</b><span>dmv</span></a>
     <nav class="links">
       <a href="#lineup">Lineup</a>
       <a href="#gallery">Gallery</a>
